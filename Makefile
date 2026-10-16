@@ -7,7 +7,7 @@ EXCLUDE_DIRS=${ALIBS}/lvgl|${ALIBS}/LovyanGFX|${ALIBS}/esp32csim|${ALIBS}/PubSub
 #PART_FILE=partitions.csv
 #FLASH_DEF=8M
 GIT_VERSION := "$(shell git describe --abbrev=6 --dirty --always)"
-ARDUINO_LIBS="${HOME}/Arduino/libraries"
+ARDUINO_LIBS=${HOME}/Arduino/libraries
 
 #CDC_ON_BOOT=1
 #BUILD_EXTRA_FLAGS += -DBOARD_HAS_PSRAM 

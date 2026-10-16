@@ -55,7 +55,6 @@ void loop() {
         lb.add(c, [](const char *line) { 
             color.g = 30;
             color.r = 0;
-            wdtReset();
             g5.write(sfmt("NMEA=%s", line));
         });
     }
@@ -66,5 +65,6 @@ void loop() {
         lastHeartbeat = millis();
         color.b = color.b != 0 ? 0 : 30;
     }
+    wdtReset();
     delay(1);
 }
