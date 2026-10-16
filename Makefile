@@ -3,7 +3,7 @@ CHIP=esp32
 PORT ?= /dev/ttyACM0
 
 ALIBS=${HOME}/Arduino/libraries
-EXCLUDE_DIRS=${ALIBS}/lvgl|${ALIBS}/LovyanGFX|${ALIBS}/esp32csim|${ALIBS}/PubSubClient/tests
+EXCLUDE_DIRS=${ALIBS}/lvgl|${ALIBS}/LovyanGFX|${ALIBS}/esp32csim|${ALIBS}/PubSubClient/tests|${ALIBS}/U8g2/sys
 #PART_FILE=partitions.csv
 #FLASH_DEF=8M
 GIT_VERSION := "$(shell git describe --abbrev=6 --dirty --always)"
@@ -48,4 +48,3 @@ uc:
 
 backtrace:
 	tr ' ' '\n' | addr2line -f -i -e ./build/${BOARD}/*.elf
-
